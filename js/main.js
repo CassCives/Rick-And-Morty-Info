@@ -10,6 +10,7 @@ function searchInfoByName(){
         document.querySelector("#name").innerText = "Name: " + data.results[0].name
         document.querySelector("#characterImage").src = data.results[0].image
         document.querySelector("#status").innerText = "Status: " + data.results[0].status
+        document.querySelector("#specie").innerText = "Specie: " + data.results[0].species
     })
     .catch(err => {
         console.log(`error ${err}`)
