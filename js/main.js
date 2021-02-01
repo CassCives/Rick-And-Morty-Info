@@ -1,13 +1,13 @@
 document.querySelector("button").addEventListener("click", searchInfoByName)
 
 
-let nameDisplay = document.querySelector("#name")
-let characterImage = document.querySelector("#characterImage")
-let statusDisplay = document.querySelector("#status")
-let specieDisplay = document.querySelector("#specie")
-let genderDisplay = document.querySelector("#gender")
-let originDisplay = document.querySelector("#origin")
-let locationDisplay = document.querySelector("#location")
+const nameDisplay = document.querySelector("#name")
+const characterImage = document.querySelector("#characterImage")
+const statusDisplay = document.querySelector("#status")
+const specieDisplay = document.querySelector("#specie")
+const genderDisplay = document.querySelector("#gender")
+const originDisplay = document.querySelector("#origin")
+const locationDisplay = document.querySelector("#location")
 
 
 function searchInfoByName(){
