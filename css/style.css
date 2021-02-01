@@ -14,8 +14,12 @@ img{
   display: block;
   margin: 0 auto;
 }
-
-
+ul{
+  list-style-type: none;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+#name{
+  font-size:30px;
+}
