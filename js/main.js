@@ -7,9 +7,9 @@ function searchInfoByName(){
     .then(res => res.json())
     .then(data => {
         console.log(data)
-        document.querySelector("h2").innerText = data.results[0].name
+        document.querySelector("h2").innerText = "Name: " + data.results[0].name
         document.querySelector("img").src = data.results[0].image
-        document.querySelector("h3").innerText = data.results[0].status
+        document.querySelector("h3").innerText = "Status: " + data.results[0].status
     })
     .catch(err => {
         console.log(`error ${err}`)
