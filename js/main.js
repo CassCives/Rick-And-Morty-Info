@@ -11,6 +11,9 @@ function searchInfoByName(){
         document.querySelector("#characterImage").src = data.results[0].image
         document.querySelector("#status").innerText = "Status: " + data.results[0].status
         document.querySelector("#specie").innerText = "Specie: " + data.results[0].species
+        document.querySelector("#gender").innerText = "Gender: " + data.results[0].gender
+        document.querySelector("#origin").innerText = "Origin: " + data.results[0].origin.name
+        document.querySelector("#location").innerText = "Location: " + data.results[0].location.name
     })
     .catch(err => {
         console.log(`error ${err}`)
