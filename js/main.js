@@ -1,6 +1,8 @@
-document.querySelector("button").addEventListener("click", searchInfoByName)
+document.querySelector("#nameButton").addEventListener("click", searchInfoByName)
+document.querySelector("#randomButton").addEventListener("click", lookForRandomCharacter)
 
-
+const minCharacterID = 1 //inclusive
+const maxCharacterID = 672 //exclusive
 const nameDisplay = document.querySelector("#name")
 const characterImage = document.querySelector("#characterImage")
 const statusDisplay = document.querySelector("#status")
@@ -23,6 +25,26 @@ function searchInfoByName(){
         genderDisplay.innerText = "Gender: " + data.results[0].gender
         originDisplay.innerText = "Origin: " + data.results[0].origin.name
         locationDisplay.innerText = "Location: " + data.results[0].location.name
+    })
+    .catch(err => {
+        console.log(`error ${err}`)
+    })
+}
+
+function lookForRandomCharacter(){
+    let randomCharacterID = Math.floor(Math.random() * (maxCharacterID - minCharacterID) + minCharacterID)
+    console.log(randomCharacterID)
+    let url = "https://rickandmortyapi.com/api/character/"+`${randomCharacterID.toString()}`
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        nameDisplay.innerText = "Name: " + data.name
+        characterImage.src = data.image
+        statusDisplay.innerText = "Status: " + data.status
+        specieDisplay.innerText = "Specie: " + data.species
+        genderDisplay.innerText = "Gender: " + data.gender
+        originDisplay.innerText = "Origin: " + data.origin.name
+        locationDisplay.innerText = "Location: " + data.location.name
     })
     .catch(err => {
         console.log(`error ${err}`)
