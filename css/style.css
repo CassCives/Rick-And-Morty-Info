@@ -31,17 +31,26 @@ ul{
 #question{
   font-size:60px;
   margin: 0.5em;
+  color: black;
+  -webkit-text-stroke: 1px lightgray;
 }
+
 #name{
   font-size:50px;
+  color: black;
+  -webkit-text-stroke: 1px lightgray;
 }
 h2{
   font-size:40px;
   width: 600px;
   margin: 0.5em;
+  color: black;
+  -webkit-text-stroke: 1px lightgray;
 }
 .properties{
   font-size:30px;
+  color: black;
+  -webkit-text-stroke: 1px lightgray;
 }
 input{
   margin: 0 0 0 30px;
